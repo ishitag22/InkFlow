@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:inkflow/diary_screen.dart';
+import 'package:inkflow/screens/diary_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);

@@ -41,6 +41,7 @@ dependencies:
   uuid: ^3.0.6
   share: ^2.0.4
   url_launcher: ^6.0.13
+  emoji_picker_flutter: ^1.6.3
 
 dev_dependencies:
   flutter_test:

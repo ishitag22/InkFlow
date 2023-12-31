@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:inkflow/splash_screen.dart';
+import 'package:inkflow/screens/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
