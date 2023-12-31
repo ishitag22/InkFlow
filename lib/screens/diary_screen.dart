@@ -23,6 +23,7 @@ class _DiaryScreenState extends State<DiaryScreen> {
   List<String> history = [];
   Map<String, String> entryUrls = {}; // Correct type for entryUrls
   final Uuid uuid = Uuid();
+  bool isRecording= false;
 
   @override
   void initState() {
@@ -185,7 +186,9 @@ class _DiaryScreenState extends State<DiaryScreen> {
       SizedBox(height: 16),
       Padding(
         padding: const EdgeInsets.only(left: 10.0),
-        child: TextField(
+        child: isRecording
+    ?Text('Recording...')
+        : TextField(
           onChanged: (value) {
             setState(() {
               title = value;
@@ -236,7 +239,16 @@ class _DiaryScreenState extends State<DiaryScreen> {
         // You can update the text styling based on the selected formatting option
         // For simplicity, let's just print the selected formatting option
         print('Selected Formatting: $formattingOption');
-      }),
+      },
+        onRecordingStatusChange: (isRecording){
+        setState(() {
+          this.isRecording= isRecording;
+        });
+        },
+      ),
     );
+  }
+  void _toggleRecording() {
+    // Implement recording functionality here if needed
   }
 }
